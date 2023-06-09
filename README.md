@@ -7,7 +7,7 @@
 
   <h2>Projects</h2>
 
-  <h3>Cranny Android App/h3>
+  <h3>Cranny Android App</h3>
   <p>Book journal app with progress sharing, programmed with Kotlin using the Android Studio IDE.</p>
 
   <h3>Winsock Chat Room</h3>
