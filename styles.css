@@ -1,0 +1,75 @@
+body {
+    background-color: #121212; /* Dark background color */
+    color: #ffffff; /* Light text color */
+    font-family: Arial, sans-serif; /* Choose a suitable font-family */
+    font-size: 16px; /* Set the base font size */
+}
+
+header {
+    background-color: #333333; /* Dark header background color */
+    color: #ffffff; /* Light text color */
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: #333333; /* Background color for the navigation bar */
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Display list items horizontally */
+    margin-right: 20px; /* Adjust the spacing between navigation items */
+}
+
+nav ul li a {
+    color: #ffffff; /* Light text color for navigation links */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+section {
+    margin: 20px;
+}
+
+h1 {
+    font-size: 28px; /* Adjust the font size for the page title */
+    color: #ff6600; /* Set a custom color for the page title */
+}
+
+h2 {
+    font-size: 24px; /* Adjust the font size for section headers */
+    color: #ff6600; /* Set a custom color for section headers */
+}
+
+p {
+    line-height: 1.5; /* Adjust the line spacing for paragraphs */
+}
+
+ul {
+    list-style-type: disc; /* Use bullets for lists */
+}
+
+.image-container {
+    display: flex;  /* Use flexbox to arrange images horizontally */
+}
+
+.image-wrapper {
+    margin-right: 10px;  /* Add some spacing between images */
+}
+
+.image-wrapper:last-child {
+    margin-right: 0;  /* Remove spacing for the last image */
+}
+
+.small-image {
+    width: 600px;
+    height: 400px;
+}
+
