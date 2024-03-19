@@ -8,46 +8,53 @@
 </head>
 <body>
     <header>
-        <h1>Blackjack</h1>
+        <h1 class="header">Ethan Stanks</h1>
+        <p class="header">Computer Science | AI/DS/SWE</p>
         <nav>
-            <a href="../index.html">Back to Portfolio</a>
+            <a class="nav-a" href="../index.html"><div class="nav-container">Home</div></a>
+            <a class="nav-a" href="../nav_pages/education.html"><div class="nav-container">Education</div></a>
+            <a class="nav-a" href="../nav_pages/projects.html"><div class="nav-container">Projects</div></a>
+            <a class="nav-a" href="../nav_pages/writings.html"><div class="nav-container">Writings</div></a>
         </nav>
     </header>
+    <hr class="gradient-break"/>
 
-    <section>
-        <h2>YouTube Video</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/9NVvlJj8H-w?si=y2CMqu7AWRvsHmE-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </section>
+    <h1>Blackjack</h1>
 
-    <section>
-        <h2>GitHub Repository</h2>
-        <p><a href="https://github.com/EthanStanks/BlackjackConsoleApp">GitHub Repo Link</a></p>
-    </section>
+    <div class="project-container">
+        <div class="description-box">
+            <h2 class="description-h2">Description</h2>
+            <p class = "description-text">I completed a project that involved developing a C# Console Window application that included a BlackjackGame class with fields for the dealer hand, player hand, and deck of cards. The game logic was implemented through various methods such as initial card dealing, player's turn, dealer's turn, declaring a winner, and drawing the game table. I also challenged myself by creating a multiple player version of the game with betting functionality.</p>
+        </div>
+        <div class="github-box">
+            <a href="https://github.com/EthanStanks/BlackjackConsoleApp" target="_blank"><img src="../assets/github.png" alt="GitHub repository for the project."></a>
+        </div>
+        <div class="description-box">
+            <h2 class="description-h2">Details</h2>
+            <ul class="description-text">
+                <li>C# Console Window application</li>
+                <li>BlackjackGame class</li>
+                <li>Fields for the dealer hand, player hand, and deck of cards</li>
+                <li>Initial card dealing</li>
+                <li>Player/Dealer turn</li>
+                <li>Declaring a winner</li>
+                <li>Multiple player version of the game</li>
+                <li>Betting functionality</li>
+                <li>Individual Project</li>
+                <li>One Month Scope</li>
+            </ul>
+        </div>
+    </div>
 
-    <section>
-        <h2>Description</h2>
-        <p>
-            I completed a project that involved developing a C# Console Window application that included a BlackjackGame class with fields for the dealer hand, player hand, and deck of cards. The game logic was implemented through various methods such as initial card dealing, player's turn, dealer's turn, declaring a winner, and drawing the game table. I also challenged myself by creating a multiple player version of the game with betting functionality.
-        </p>
-    </section>
-
-    <section>
-        <h2>Details</h2>
-        <ul>
-            <li>C# Console Window application</li>
-            <li>BlackjackGame class</li>
-            <li>Fields for the dealer hand, player hand, and deck of cards</li>
-            <li>Initial card dealing</li>
-            <li>Player/Dealer turn</li>
-            <li>Declaring a winner</li>
-            <li>Multiple player version of the game</li>
-            <li>Betting functionality</li>
-            <li>Individual Project</li>
-            <li>One Month Scope</li>
-        </ul>
-    </section>
+    <h2 class="project-h2"><u>YouTube Video</u></h2>
+    <div class="project-container">
+        <div class="youtube-box">
+            <iframe class="youtube-video" width="380" height="212" src="https://www.youtube.com/embed/9NVvlJj8H-w?si=y2CMqu7AWRvsHmE-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
 
     <footer>
+        <hr class="gradient-break"/>
         <p>&copy; 2024 Ethan Stanks</p>
     </footer>
 </body>

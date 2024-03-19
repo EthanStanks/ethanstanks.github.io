@@ -8,41 +8,58 @@
 </head>
 <body>
     <header>
-        <h1>Violence Classifier</h1>
+        <h1 class="header">Ethan Stanks</h1>
+        <p class="header">Computer Science | AI/DS/SWE</p>
         <nav>
-            <a href="../index.html">Back to Portfolio</a>
+            <a class="nav-a" href="../index.html"><div class="nav-container">Home</div></a>
+            <a class="nav-a" href="../nav_pages/education.html"><div class="nav-container">Education</div></a>
+            <a class="nav-a" href="../nav_pages/projects.html"><div class="nav-container">Projects</div></a>
+            <a class="nav-a" href="../nav_pages/writings.html"><div class="nav-container">Writings</div></a>
         </nav>
     </header>
+    <hr class="gradient-break"/>
 
-    <section>
-        <div class="image-container">
-            <div class="image-wrapper">
-                <img src="../assets/violence.PNG" alt="Image 1" class="medium-image">
-            </div>
-            <div>
-                <h2>YouTube Video</h2>
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/cKltZzBQpUw?si=B-_3E8n1xWQxL2Ng" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <h2>GitHub Repository</h2>
-                <p><a href="https://github.com/EthanStanks/ViolenceClassificationCV">GitHub Repo Link</a></p>
-                <h2>Description</h2>
-                <p>
-                    Computer Vision classification for violence using a VGG16 Architecture with pictures and videos.
-                </p>
-                <h2>Details</h2>
-                <ul>
-                    <li><b>VGG16 Architecture</b>: Three Convolution2D layers with a FC dense layer as the output.</li>
-                    <li><b>Libraries</b>: TensorFlow Keras and Sklearn for the model. CV2 and OS for data preprocessing.</li>
-                    <li><b>Image Prediction</b>: Predicts violence for multiple images. Graphs their predictions with the original images using MatPlotLib.</li>
-                    <li><b>Video Prediction</b>: Predicts violence for each frame of a video.</li>
-                    <li><b>Video Blurring</b>: Capable of blurring violence detected frames of videos then writing the altered version to a new .mp4v</li>
-                    <li>Individual Project</li>
-                    <li>One Month Scope</li>
-                </ul>
-            </div>
+    <h1>Violence Classifier</h1>
+
+    <div class="project-container">
+        <div class="description-box">
+            <h2 class="description-h2">Description</h2>
+            <p class = "description-text">Computer Vision classification for violence using a VGG16 Architecture with pictures and videos.</p>
         </div>
-    </section>
+        <div class="github-box">
+            <a href="https://github.com/EthanStanks/ViolenceClassificationCV" target="_blank"><img src="../assets/github.png" alt="GitHub repository for the project."></a>
+        </div>
+        <div class="description-box">
+            <h2 class="description-h2">Details</h2>
+            <ul class="description-text">
+                <li><b>VGG16 Architecture</b>: Three Convolution2D layers with a FC dense layer as the output.</li>
+                <li><b>Libraries</b>: TensorFlow Keras and Sklearn for the model. CV2 and OS for data preprocessing.</li>
+                <li><b>Image Prediction</b>: Predicts violence for multiple images. Graphs their predictions with the original images using MatPlotLib.</li>
+                <li><b>Video Prediction</b>: Predicts violence for each frame of a video.</li>
+                <li><b>Video Blurring</b>: Capable of blurring violence detected frames of videos then writing the altered version to a new .mp4v</li>
+                <li>Individual Project</li>
+                <li>One Month Scope</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <h2 class="project-h2"><u>YouTube Video</u></h2>
+    <div class="project-container">
+        <div class="youtube-box">
+            <iframe class="youtube-video" width="380" height="212" src="https://www.youtube.com/embed/cKltZzBQpUw?si=B-_3E8n1xWQxL2Ng" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+
+    <h2 class="project-h2"><u>Images</u></h2>
+    <div class="project-container">
+        <div class="image-box">
+            <img src="../assets/violence.PNG" alt="Image 1">
+        </div>
+    </div>
 
     <footer>
+        <hr class="gradient-break"/>
         <p>&copy; 2024 Ethan Stanks</p>
     </footer>
 </body>

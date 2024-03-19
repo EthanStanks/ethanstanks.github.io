@@ -8,56 +8,63 @@
 </head>
 <body>
     <header>
-        <h1>FilmSeeker</h1>
+        <h1 class="header">Ethan Stanks</h1>
+        <p class="header">Computer Science | AI/DS/SWE</p>
         <nav>
-            <a href="../index.html">Back to Portfolio</a>
+            <a class="nav-a" href="../index.html"><div class="nav-container">Home</div></a>
+            <a class="nav-a" href="../nav_pages/education.html"><div class="nav-container">Education</div></a>
+            <a class="nav-a" href="../nav_pages/projects.html"><div class="nav-container">Projects</div></a>
+            <a class="nav-a" href="../nav_pages/writings.html"><div class="nav-container">Writings</div></a>
         </nav>
     </header>
+    <hr class="gradient-break"/>
 
-    <section>
-        <h2>YouTube Video</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/xuR0ukF-qLo?si=AQgeSmLDe-umAj-N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </section>
+    <h1>FilmSeeker</h1>
 
-    <section>
-        <div class="image-container">
-            <div class="image-wrapper">
-                <img src="../assets/FilmSeeker1.PNG" alt="Image 1" class="medium-image">
-            </div>
-            <div class="image-wrapper">
-                <img src="../assets/FilmSeeker2.png" alt="Image 2" class="medium-image">
-            </div>
+    <div class="project-container">
+        <div class="description-box">
+            <h2 class="description-h2">Description</h2>
+            <p class = "description-text">FilmSeeker uses NLP techniques to recommend movies based off of movie descriptions. This project was completed in a couple weeks. I took on this project to practice what I had learned in my NLP class December 2023. This project is capable of working with Discord's API to have a more friendly user-interface, but also works in Window's command prompt.</p>
         </div>
-    </section>
+        <div class="github-box">
+            <a href="https://github.com/EthanStanks/FilmSeeker" target="_blank"><img src="../assets/github.png" alt="GitHub repository for the project."></a>
+        </div>
+        <div class="description-box">
+            <h2 class="description-h2">Details</h2>
+            <ul class="description-text">
+                <li>Natural Language Processing</li>
+                <li>Cosine Similarity with Scitkit-learn</li>
+                <li>Pipeline Structure with Scitkit-learn</li>
+                <li>Serializing with Pickle</li>
+                <li>Data Cleaning and Preparing</li>
+                <li>EDA with WordCloud and Matplotlib</li>
+                <li>Discord API</li>
+                <li>Individual Project</li>
+            </ul>
+        </div>
+    </div>
 
-    <section>
-        <h2>GitHub Repository</h2>
-        <p><a href="https://github.com/EthanStanks/FilmSeeker">GitHub Repo Link</a></p>
-    </section>
+    <h2 class="project-h2"><u>YouTube Video</u></h2>
+    <div class="project-container">
+        <div class="youtube-box">
+            <iframe class="youtube-video" width="380" height="212" src="https://www.youtube.com/embed/xuR0ukF-qLo?si=AQgeSmLDe-umAj-N" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
 
-    <section>
-        <h2>Description</h2>
-        <p>
-            FilmSeeker uses NLP techniques to recommend movies based off of movie descriptions. This project was completed in a couple weeks. I took on this project to practice what I had learned in my NLP class December 2023. This project is capable of working with Discord's API to have a more friendly user-interface, but also works in Window's command prompt.
-        </p>
-    </section>
-
-    <section>
-        <h2>Details</h2>
-        <ul>
-            <li>Natural Language Processing</li>
-            <li>Cosine Similarity with Scitkit-learn</li>
-            <li>Pipeline Structure with Scitkit-learn</li>
-            <li>Serializing with Pickle</li>
-            <li>Data Cleaning and Preparing</li>
-            <li>EDA with WordCloud and Matplotlib</li>
-            <li>Discord API</li>
-            <li>Individual Project</li>
-        </ul>
-    </section>
+    <h2 class="project-h2"><u>Images</u></h2>
+    <div class="project-container">
+        <div class="image-box">
+            <img src="../assets/FilmSeeker1.PNG" alt="Image 1">
+        </div>
+        <div class="image-box">
+            <img src="../assets/FilmSeeker2.png" alt="Image 1">
+        </div>
+    </div>
 
     <footer>
+        <hr class="gradient-break"/>
         <p>&copy; 2024 Ethan Stanks</p>
     </footer>
+
 </body>
 </html>

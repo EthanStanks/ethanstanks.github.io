@@ -8,46 +8,55 @@
 </head>
 <body>
     <header>
-        <h1>Cranny Android App</h1>
+        <h1 class="header">Ethan Stanks</h1>
+        <p class="header">Computer Science | AI/DS/SWE</p>
         <nav>
-            <a href="../index.html">Back to Portfolio</a>
+            <a class="nav-a" href="../index.html"><div class="nav-container">Home</div></a>
+            <a class="nav-a" href="../nav_pages/education.html"><div class="nav-container">Education</div></a>
+            <a class="nav-a" href="../nav_pages/projects.html"><div class="nav-container">Projects</div></a>
+            <a class="nav-a" href="../nav_pages/writings.html"><div class="nav-container">Writings</div></a>
         </nav>
     </header>
+    <hr class="gradient-break"/>
 
-    <section>
-        <h2>YouTube Videos</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/kXXkAOJansc?si=zYg2IjmjHsgg_ejQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/JsOYlmfvhsg?si=Pb--ZHhGZ3ztHHaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-    </section>
+    <h1>Cranny Android App</h1>
 
-    <section>
-        <h2>GitHub Repository</h2>
-        <p><a href="https://github.com/rfergonise/Cranny">GitHub Repo Link</a></p>
-    </section>
+    <div class="project-container">
+        <div class="description-box">
+            <h2 class="description-h2">Description</h2>
+            <p class = "description-text">In this two-month project, I played a pivotal role in developing Cranny, an Android Studio Kotlin app. 
+                I focused on creating the social page, including a feed to showcase friends' recently read books and profile information. 
+                Additionally, I implemented Firebase's Google authentication for the login page and created classes for CRUD operations on Firebase.</p>
+        </div>
+        <div class="github-box">
+            <a href="https://github.com/rfergonise/Cranny" target="_blank"><img src="../assets/github.png" alt="GitHub repository for the project."></a>
+        </div>
+        <div class="description-box">
+            <h2 class="description-h2">Details</h2>
+            <ul class="description-text">
+                <li>Android Studio with Kotlin</li>
+                <li>Social Media Development</li>
+                <li>Firebase's Google authentication</li>
+                <li>CRUD System</li>
+                <li>Debug Support for Team Members</li>
+                <li>Group Project</li>
+                <li>Two Month Scope</li>
+            </ul>
+        </div>
+    </div>
 
-    <section>
-        <h2>Description</h2>
-        <p>
-            In this two-month project, I played a pivotal role in developing Cranny, an Android Studio Kotlin app. 
-            I focused on creating the social page, including a feed to showcase friends' recently read books and profile information. 
-            Additionally, I implemented Firebase's Google authentication for the login page and created classes for CRUD operations on Firebase.
-        </p>
-    </section>
-
-    <section>
-        <h2>Details</h2>
-        <ul>
-            <li>Android Studio with Kotlin</li>
-            <li>Social Media Development</li>
-            <li>Firebase's Google authentication</li>
-            <li>CRUD System</li>
-            <li>Debug Support for Team Members</li>
-            <li>Group Project</li>
-            <li>Two Month Scope</li>
-        </ul>
-    </section>
+    <h2 class="project-h2"><u>YouTube Videos</u></h2>
+    <div class="project-container">
+        <div class="youtube-box">
+            <iframe class="youtube-video" width="380" height="212" src="https://www.youtube.com/embed/kXXkAOJansc?si=zYg2IjmjHsgg_ejQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+        <div class="youtube-box">
+            <iframe class="youtube-video" width="380" height="212" src="https://www.youtube.com/embed/JsOYlmfvhsg?si=Pb--ZHhGZ3ztHHaI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
 
     <footer>
+        <hr class="gradient-break"/>
         <p>&copy; 2024 Ethan Stanks</p>
     </footer>
 </body>

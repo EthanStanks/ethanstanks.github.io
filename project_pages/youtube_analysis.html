@@ -5,75 +5,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ethan Stanks</title>
     <link rel="stylesheet" href="../styles.css">
-    <style>
-        #pdf{
-            width: 100%;
-            height: 975px;
-        }
-    </style>
 </head>
 <body>
     <header>
-        <h1>YouTube Channel Content Analysis</h1>
+        <h1 class="header">Ethan Stanks</h1>
+        <p class="header">Computer Science | AI/DS/SWE</p>
         <nav>
-            <a href="../index.html">Back to Portfolio</a>
+            <a class="nav-a" href="../index.html"><div class="nav-container">Home</div></a>
+            <a class="nav-a" href="../nav_pages/education.html"><div class="nav-container">Education</div></a>
+            <a class="nav-a" href="../nav_pages/projects.html"><div class="nav-container">Projects</div></a>
+            <a class="nav-a" href="../nav_pages/writings.html"><div class="nav-container">Writings</div></a>
         </nav>
     </header>
+    <hr class="gradient-break"/>
 
-    <section>
-        <div class="image-container">
-            <div class="image-wrapper">
-                <img src="../assets/youtube1.png" alt="Image 1" class="small-image">
-            </div>
-            <div class="image-wrapper">
-                <img src="../assets/youtube2.png" alt="Image 2" class="small-image">
-            </div>
-            <div class="image-wrapper">
-                <img src="../assets/youtube3.png" alt="Image 3" class="small-image">
-            </div>
+    <h1>YouTube Channel Content Analysis</h1>
+
+    <div class="project-container">
+        <div class="description-box">
+            <h2 class="description-h2">Description</h2>
+            <p class = "description-text">This Python project is designed to analyze content from multiple YouTube channels. It provides insights into video details, engagement patterns, temporal behaviors, and more. The project consists of various modules to scrape YouTube data, perform data analysis, and print the results.</p>
         </div>
-    </section>
+        <div class="description-box">
+            <h2 class="description-h2">Details</h2>
+            <ul class="description-text">
+                <li>Selenium Web Scrape</li>
+                <li>BeautifulSoup Web Scrape</li>
+                <li>YouTube Data API</li>
+                <li>Pandas</li>
+                <li>Matplotlib Visualizations</li>
+                <li>Research Paper</li>
+                <li>Individual Project</li>
+                <li>One Month Scope</li>
+            </ul>
+        </div>
+        <div class="description-box">
+            <h2 class="description-h2">Objectives</h2>
+            <ul class="description-text">
+                <li>Scrape data or use web API</li>
+                <li>Store data to a well formatted dataframe, save to file</li>
+                <li>Create at least two (very different) visualizations</li>
+                <li>Aesthetics</li>
+                <li>Analysis</li>
+            </ul>
+        </div>
+        <div class="github-box">
+            <a href="https://github.com/EthanStanks/YouTubeChannelDataAnalysis" target="_blank"><img src="../assets/github.png" alt="GitHub repository for the project."></a>
+        </div>
+    </div>
 
-    <section>
-        <h2>GitHub Repository</h2>
-        <p><a href="https://github.com/EthanStanks/YouTubeChannelDataAnalysis">GitHub Repo Link</a></p>
-    </section>
-
-    <section>
-        <h2>Objectives</h2>
-        <ul>
-            <li>Scrape data or use web API</li>
-            <li>Store data to a well formatted dataframe, save to file</li>
-            <li>Create at least two (very different) visualizations</li>
-            <li>Aesthetics</li>
-            <li>Analysis</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Description</h2>
-        <p>
-            This Python project is designed to analyze content from multiple YouTube channels. It provides insights into video details, engagement patterns, temporal behaviors, and more. The project consists of various modules to scrape YouTube data, perform data analysis, and print the results.
-        </p>
-    </section>
-
-    <section>
-        <h2>Details</h2>
-        <ul>
-            <li>Selenium Web Scrape</li>
-            <li>BeautifulSoup Web Scrape</li>
-            <li>YouTube Data API</li>
-            <li>Pandas</li>
-            <li>Matplotlib Visualizations</li>
-            <li>Research Paper</li>
-            <li>Individual Project</li>
-            <li>One Month Scope</li>
-        </ul>
-    </section>
-
-    <p><a href="../downloads/StanksEthan_YouTubeChannelAnalysisPaper.pdf" download>PDF Not Loading?</a><iframe id="pdf" src="../downloads/StanksEthan_YouTubeChannelAnalysisPaper.pdf" frameborder="0"></iframe></p>
+    <h2 class="project-h2"><u>Images</u></h2>
+    <div class="project-container">
+        <div class="image-box">
+            <img src="../assets/youtube1.PNG" alt="Image 1">
+        </div>
+        <div class="image-box">
+            <img src="../assets/youtube2.png" alt="Image 1">
+        </div>
+        <div class="image-box">
+            <img src="../assets/youtube3.png" alt="Image 1">
+        </div>
+    </div>
+    <h2 class="project-h2"><u>Paper</u></h2>
+    <div class="pdf-box">
+        <embed width="1000" height="1000" src="../downloads/StanksEthan_YouTubeChannelAnalysisPaper.pdf">
+    </div>
 
     <footer>
+        <hr class="gradient-break"/>
         <p>&copy; 2024 Ethan Stanks</p>
     </footer>
 </body>

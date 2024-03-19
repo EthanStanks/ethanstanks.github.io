@@ -5,80 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ethan Stanks</title>
     <link rel="stylesheet" href="../styles.css">
-    <style>
-        #pdf{
-            width: 100%;
-            height: 975px;
-        }
-    </style>
 </head>
 <body>
     <header>
-        <h1>Titanic Passenger Survival Prediction</h1>
+        <h1 class="header">Ethan Stanks</h1>
+        <p class="header">Computer Science | AI/DS/SWE</p>
         <nav>
-            <a href="../index.html">Back to Portfolio</a>
+            <a class="nav-a" href="../index.html"><div class="nav-container">Home</div></a>
+            <a class="nav-a" href="../nav_pages/education.html"><div class="nav-container">Education</div></a>
+            <a class="nav-a" href="../nav_pages/projects.html"><div class="nav-container">Projects</div></a>
+            <a class="nav-a" href="../nav_pages/writings.html"><div class="nav-container">Writings</div></a>
         </nav>
     </header>
+    <hr class="gradient-break"/>
 
-    <section>
-        <div class="image-container">
-            <div class="image-wrapper">
-                <img src="../assets/titanic1.png" alt="Image 1" class="small-image">
-            </div>
-            <div class="image-wrapper">
-                <img src="../assets/titanic2.png" alt="Image 2" class="small-image">
-            </div>
-            <div class="image-wrapper">
-                <img src="../assets/titanic3.png" alt="Image 3" class="small-image">
-            </div>
+    <h1>Titanic Passenger Survival Prediction</h1>
+
+    <div class="project-container">
+        <div class="description-box">
+            <h2 class="description-h2">Description</h2>
+            <p class = "description-text">This research project is for analyzing survivors of the titanic and creating a basic SKLearn model for making predictions about the survivors. 
+                The dataset was provided to the class as this project is meant to be an interesting real world application in my education in data science. 
+                My model predicts if a passenger will survive based on the passenger's sex as well as their ticket class. Based on these two inputs a solid prediction can be made about a passenger's survival rate.</p>
         </div>
-    </section>
+        <div class="description-box">
+            <h2 class="description-h2">Details</h2>
+            <ul class="description-text">
+                <li>SKLearn KneighborsClassifier Model</li>
+                <li>Pandas</li>
+                <li>Matplotlib</li>
+                <li>Seaborn</li>
+                <li>Correlation Heatmap</li>
+                <li>Cross Validation Score</li>
+                <li>Classification Report</li>
+                <li>Confusion Matrix Heatmap</li>
+                <li>Research Paper</li>
+                <li>Individual Project</li>
+                <li>One Month Scope</li>
+            </ul>
+        </div>
+        <div class="description-box">
+            <h2 class="description-h2">Objectives</h2>
+            <ul class="description-text">
+                <li>Perform EDA</li>
+                <li>Data Processing</li>
+                <li>Train Model</li>
+                <li>Model Validation</li>
+                <li>Technique Summaries</li>
+            </ul>
+        </div>
+        <div class="github-box">
+            <a href="https://github.com/EthanStanks/Titanic-Survival-Model" target="_blank"><img src="../assets/github.png" alt="GitHub repository for the project."></a>
+        </div>
+    </div>
 
-    <section>
-        <h2>GitHub Repository</h2>
-        <p><a href="https://github.com/EthanStanks/Titanic-Survival-Model">GitHub Repo Link</a></p>
-    </section>
-
-    <section>
-        <h2>Objectives</h2>
-        <ul>
-            <li>Perform EDA</li>
-            <li>Data Processing</li>
-            <li>Train Model</li>
-            <li>Model Validation</li>
-            <li>Technique Summaries</li>
-        </ul>
-    </section>
-
-    <section>
-        <h2>Description</h2>
-        <p>
-            This research project is for analyzing survivors of the titanic and creating a basic SKLearn model for making predictions about the survivors. 
-            The dataset was provided to the class as this project is meant to be an interesting real world application in my education in data science. 
-            My model predicts if a passenger will survive based on the passenger's sex as well as their ticket class. Based on these two inputs a solid prediction can be made about a passenger's survival rate.
-        </p>
-    </section>
-
-    <section>
-        <h2>Details</h2>
-        <ul>
-            <li>SKLearn KneighborsClassifier Model</li>
-            <li>Pandas</li>
-            <li>Matplotlib</li>
-            <li>Seaborn</li>
-            <li>Correlation Heatmap</li>
-            <li>Cross Validation Score</li>
-            <li>Classification Report</li>
-            <li>Confusion Matrix Heatmap</li>
-            <li>Research Paper</li>
-            <li>Individual Project</li>
-            <li>One Month Scope</li>
-        </ul>
-    </section>
-
-    <p><a href="../downloads/StanksEthan_TitanicAnalysisPaper.pdf" download>PDF Not Loading?</a><iframe id="pdf" src="../downloads/StanksEthan_TitanicAnalysisPaper.pdf" frameborder="0"></iframe></p>
+    <h2 class="project-h2"><u>Images</u></h2>
+    <div class="project-container">
+        <div class="image-box">
+            <img src="../assets/titanic1.png" alt="Image 1">
+        </div>
+        <div class="image-box">
+            <img src="../assets/titanic2.png" alt="Image 1">
+        </div>
+        <div class="image-box">
+            <img src="../assets/titanic3.png" alt="Image 1">
+        </div>
+    </div>
+    <h2 class="project-h2"><u>Paper</u></h2>
+    <div class="pdf-box">
+        <embed width="1000" height="1000" src="../downloads/StanksEthan_TitanicAnalysisPaper.pdf">
+    </div>
 
     <footer>
+        <hr class="gradient-break"/>
         <p>&copy; 2024 Ethan Stanks</p>
     </footer>
 </body>
