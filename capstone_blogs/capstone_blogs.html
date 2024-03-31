@@ -21,9 +21,10 @@
     <h1>Capstone Blogs</h1>
     <h2>Month One</h2>
     <nav class="nav-blog">
-        <a  class="nav-a" href="#1"> <div class="nav-container">Introduction</div>          </a>
-        <a  class="nav-a" href="#2"> <div class="nav-container">Research and Planning</div> </a>
-        <a  class="nav-a" href="#3"> <div class="nav-container">Project Management</div>    </a>
+        <a  class="nav-a" href="#1"> <div class="nav-container">Introduction</div>              </a>
+        <a  class="nav-a" href="#2"> <div class="nav-container">Research and Planning</div>     </a>
+        <a  class="nav-a" href="#3"> <div class="nav-container">Project Management</div>        </a>
+        <a  class="nav-a" href="#4"> <div class="nav-container">HuggingFace Research</div>   </a>
     </nav>
       
     <div class="scroll-container" id="month-1">
@@ -72,6 +73,22 @@
                 One more week to go!
             </p>
           <img class="post-image" src="../capstone_blogs/images/Wireframe.PNG" alt="Wireframe first draft.">
+        </div>
+        <div id="4" class="section post">
+            <h2 class="post-title">HuggingFace Research</h2>
+            <p class="post-author">Author: Ethan Stanks</p>
+            <p class="post-author">March 31, 2024</p>
+            <p class="post-page-count">Page Count: 466</p>
+            <p class="post-body">
+                This was the last week for project planning! Tomorrow starts my one-week spring break, then it's onto the first month of development.<br />
+                Not much was done this week, but some productive tasks were completed. First, I got refreshed and learned more about sprint planning and SCRUM. During production months, the team and I will be completing one-week sprints in agile development. The final wireframe was due, but last week we already added the final touches, so nothing needed to change. At the start of the week, we met with Chad Gibson, our instructor, to go over our Jira board and the game plan for our project. I didn't have anything else to do for the week, so I thought I'd learn more about HuggingFace because that's what I'll be working on right away. My goal was to get a basic model hosted on HuggingFace and then make a basic HTML front-end for it on HuggingFace as well.<br />
+                I found a free dataset on honey production in the USA from 1998 to 2012. I created some graphs for exploratory data analysis to see how well the data is and if there are any correlations I could use. My model is a basic KNeighborsRegressor from scikit-learn that predicts the honey's production value. It predicts this by learning these inputs: state, number of colonies, yield per colony, total production, stocks held by producers, and the year. The model, without any tweaking, performs at 82%, which is fine for the purpose it will serve. <br />
+                Next for HuggingFace, they have three ways to upload data to their platform. Models, which is like a git repo for AI models. Datasets, where you can share datasets you have gathered. Spaces, where you can create interactive spaces for your projects. My first hypothesis was to upload my model under their model section, then create a space as the front end and connect the two. After creating a basic HTML front-end with javascript to fetch and send data to the model, I ran into some issues. HuggingFace's API endpoint for models typically works for transformers, but I have a custom-made model, so I would need to create a custom API wrapper. <br />
+                A workaround I found for the problem is to have the model and front-end all under one space. The space uses Gradio, an interactive front-end Python library that can easily load the model from the local library and call predictions. The application is up and running, and I can easily make predictions on my model in the cloud, which was the goal. Sadly, I didn't get this to work with HTML. Over spring break, I plan on researching more about custom wrappers for an HTML front-end!<br />
+                Below you can see the correlation plot for the dataset and the basic interactive web-app hosted on HuggingFace.<br />
+            </p>
+            <img class="post-image" src="../capstone_blogs/images/honey_app.PNG" alt="Honey Application.">
+            <img class="post-image" src="../capstone_blogs/images/honey_corr.png" alt="Honey correlation.">
         </div>
     </div>
 
