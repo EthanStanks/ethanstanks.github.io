@@ -94,10 +94,29 @@
 
     <h2>Month Two</h2>
     <nav class="nav-blog">
-        <a  class="nav-a" href="#"><div class="nav-container">Coming soon...</div></a>
+        <a  class="nav-a" href="#5"><div class="nav-container">First Week of Development</div></a>
     </nav>
     <div class="scroll-container" id="month-2">
-
+        <div id="5" class="section post">
+            <h2 class="post-title">First Week of Development</h2>
+            <p class="post-author">Author: Ethan Stanks</p>
+            <p class="post-author">April 14, 2024</p>
+            <p class="post-page-count">Page Count: 489</p>
+            <p class="post-body">
+                Spring break went fast, and now my team and I are already through the first week of development.
+                For our first week of spring, I was tasked with preprocessing the image dataset and creating a starter front-end display on HuggingFace that has the prompt box, image display, and random generation function.
+                I was also tasked with creating the discriminator for the GAN model and uploading models to HuggingFace.
+                Our Jira board for sprints is set up to have five categories: to-do, in progress, team testing, ready for review, and verified complete.<br />
+                To-Do is where the tasks start during the sprint that need to be worked on, with each task having a team member assigned to it and an estimated completion time. In progress are tasks that team members are currently working on.
+                Team tests are tasks that have been completed but need verification from other team members. Ready for review are tasks verified by team members but that need verification from instructors that they are complete. Verified complete are tasks that have been checked off as complete by instructors.<br />
+                This week, preprocessing of the image dataset and front-end display on HuggingFace are in the ready for review section. An image of the HuggingFace display is below. My task for creating the GAN discriminator is in the in-progress section. Uploading the models to Hugging Face was left in the to-do category because I didn't have any trained models to upload this week.<br />
+                I created the discriminator by following a blog post for building a StyleGen 2 model from scratch that Will shared with me.
+                Building Stylegen 2 from scratch for image generation of women's clothes worked, so I was able to switch it to using the image dataset that I preprocessed. It all compiled and ran, but I was only able to train it on one epoch due to time constants. An image it generated from training on realistic faces is below. Since I didn't push the code to a branch yet or integrate it with the code that Will developed, I didn't mark it for team testing. It's really interesting to learn how the discriminator works. It transforms the image with a resolution of 2 log by 2 log of the width and height of the image to create feature maps of the same resolution. It takes it and runs it through blocks with residual connections. Then the resolution is down-sampled two times at each block while doubling the features. The discriminator blocks utilize a 3x3 equalized convolution with a Leaky Rely activation function, which is then down-sampled by using an AvePool2d.<br />
+                Hopefully, next week, Will and I will be able to integrate the model and get it ready for training with checkpoints. I'd also like to run EDA on the images if that's possible to ensure the images in the dataset are what we are looking for and if any images could be considered poison for our training.<br />
+            </p>
+            <img class="post-image" src="../capstone_blogs/images/m2_w1_1.PNG" alt="HuggingFace Display">
+            <img class="post-image" src="../capstone_blogs/images/m2_w1_2.png" alt="One Epoch Generation Result">
+        </div>
     </div>
 
     <h2>Month Three</h2>
