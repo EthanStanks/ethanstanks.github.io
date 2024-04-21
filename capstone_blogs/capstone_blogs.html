@@ -95,6 +95,7 @@
     <h2>Month Two</h2>
     <nav class="nav-blog">
         <a  class="nav-a" href="#5"><div class="nav-container">First Week of Development</div></a>
+        <a  class="nav-a" href="#6"><div class="nav-container">Performing EDA</div></a>
     </nav>
     <div class="scroll-container" id="month-2">
         <div id="5" class="section post">
@@ -116,6 +117,24 @@
             </p>
             <img class="post-image" src="../capstone_blogs/images/m2_w1_1.PNG" alt="HuggingFace Display">
             <img class="post-image" src="../capstone_blogs/images/m2_w1_2.png" alt="One Epoch Generation Result">
+        </div>
+        <div id="6" class="section post">
+            <h2 class="post-title">Performing EDA</h2>
+            <p class="post-author">Author: Ethan Stanks</p>
+            <p class="post-author">April 21, 2024</p>
+            <p class="post-page-count">Page Count: 607</p>
+            <p class="post-body">
+                Another week goes by, and the project is slowly coming together. This week I was tasked with ensuring the prompt box only allows words, an option to rerun the last used prompt, performing EDA on the accuracy of generated images, and performing EDA on the generated captions for each image. I was also tasked with getting the GAN model uploaded and generating images on HuggingFace, but Will and I ran into some issues with the exported model files, so that will be pushed to next week.<br />
+                Getting the prompt box to only allow words was fairly simple, as it already checks that there are words, so another if check was added in with that. I ran into some issues with Gradio, the Python interface library I use for HuggingFace, when creating the redo prompt button. I can't seem to add a button element at all to the interface. Even Gradio's documentation doesn't seem to load the example with a button, so it might be an issue on Gradio's side of things. My workaround was similar to last week for using the random seed option, a check box. If the redo last prompt checkbox is true, it will ignore whatever is in the prompt box and seed option, then run the last used prompt instead.<br />
+                Now onto the fun stuff from this week, EDA.<br />
+                I asked our instructor, Philip, what kind of EDA I could perform for images and computer vision in general. Images aren't as straightforward to explore like a dataset containing quantitative or categorical data, but instead are all made up of pixels. Philip recommend I look into algorithms that compare a generated image to the training images to get the accuarcry of how close the generation is to looking real. I did this by taking the generated image and sampling 1/4 of the training images. I then converted the images to PyTorch tensors. Looped through each training image tensor, calculating the perceptual distance and SSIM value between the tensor and the generated image tensor. After storing the calculation, I calculate the min, max, mean, and median of all the results to get a better look at how the generated image compares to all the sampled training images. The perceptual distance score reflects the visual difference perceived by human eyes, while the SSIM score shows how similar or different an image structure is based on its texture, brightness, and contrast.<br />
+                Temitayo generated captions for each training image last week. That gave me an idea to explore the most commonly used words for each caption and how long each caption was to get a better picture of the NLP data. The captions are saved to a text file. I read the file as a csv file type using Pandas so that I could split it into two categories: image and caption. Using the Counter Python library, I separate each word into its own row and then get the total count. Using this count, I was able to create three graphs. A wordcloud and frequency bar graph display the most commonly used words in the captions. As well as a histogram that plots the lengths of each caption.<br />
+                The graphs turned out great and can be seen below, as well as a screenshot from the image comparison EDA result. Next week, I hope to have a working model file that I can get hooked up to start generating images on HuggingFace as well as creating prompt suggestions on the interface. I know in the future I'll have to switch from using Gradio due to the contraints I'm having with it, but for the first month it'll be fine.
+            </p>
+            <img class="post-image" src="../capstone_blogs/images/m2_w2_1.PNG" alt="Image Comparison Results">
+            <img class="post-image" src="../capstone_blogs/images/m2_w2_2.png" alt="Top Ten Most Common Used Words">
+            <img class="post-image" src="../capstone_blogs/images/m2_w2_3.png" alt="Lengths of Each Caption">
+            <img class="post-image" src="../capstone_blogs/images/m2_w2_4.png" alt="WordCloud">
         </div>
     </div>
 
