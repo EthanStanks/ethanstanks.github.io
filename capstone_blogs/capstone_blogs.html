@@ -97,6 +97,7 @@
         <a  class="nav-a" href="#5"><div class="nav-container">First Week of Development</div></a>
         <a  class="nav-a" href="#6"><div class="nav-container">Performing EDA</div></a>
         <a  class="nav-a" href="#7"><div class="nav-container">Upgrades People, Upgrades</div></a>
+        <a  class="nav-a" href="#8"><div class="nav-container">Reformatting Layout</div></a>
     </nav>
     <div class="scroll-container" id="month-2">
         <div id="5" class="section post">
@@ -157,6 +158,22 @@
             <img class="post-image" src="../capstone_blogs/images/m2_w3_2.PNG" alt="Image Generation on HuggingFace">
             <img class="post-image" src="../capstone_blogs/images/m2_w3_3.PNG" alt="Image Augmentation Comparison Results">
             <img class="post-image" src="../capstone_blogs/images/m2_w3_4.PNG" alt="Image Augmentations">
+        </div>
+        <div id="8" class="section post">
+            <h2 class="post-title">Reformatting Layout</h2>
+            <p class="post-author">Author: Ethan Stanks</p>
+            <p class="post-author">April 28, 2024</p>
+            <p class="post-page-count">Page Count: 516</p>
+            <p class="post-body">
+                The last week of the first month is now over. The project has two more months to go until it is all complete. This month I worked on getting machine learning applications running and working on HuggingFace, creating a front-end application with Gradio, creating the initial discriminator for the GAN model, performing EDA on image comparison and NLP captions, and collaborating with my team to get their work integrated into one system. Next month, I'd like to do more machine learning work. What the team wanted for the project is almost done, so there is plenty of room for more expansion and the capabilities of new systems.<br />
+                This week, my tasks involved redesigning the layout of the Gradio front-end, updating the prompt to handle multiple languages from Temitayo's functions, adjusting the image compare script for Will, adding an upload image as an input option, adding a new output for person description generation, generating images from Will's pickle file, and displaying image accuracy scores.<br />
+                I updated the image comparison script for Will to integrate into his scripts. I made functions that can compare png to png, png to numpy array, and numpy array to numpy array. I'm hoping to use this for the image input to compare a real image to what his GAN model generated.<br />
+                Getting an image upload as an input for HuggingSpace was simple, but I did run into issues. The default file type when it is uploaded is a numpy array. This causes issues when I try to check if an image was uploaded because checking if a numpy array is None causes many headaches. After a couple hours and many StackOverFlow tabs, I switched to using a Pillow image as the default. Then, when the image is uploaded, I should be able to easily convert it to a numpy array.<br />
+                Temitayo plans to generate descriptions of the faces that are generated. I created a new output for that description to be displayed when that system is implemented. He also updated his clip code to handle multiple languages, so I was able to easily update the text prompt to use them. Below is a picture of using a Spanish prompt.<br />
+                Formatting the HuggingFace display was very needed, so I spent a lot of time trying to make it clear and organized. Gradio has an element called Accordion that I put the settings inside of because it allows the user to collapse the tab whenever they'd like. Gradio also has an element called Tab that creates a tabbing system like a web browser. Using the tab element, I separated the text prompt input and image input to create better organization. Below is what the interface now looks like before generating an image.<br />
+            </p>
+            <img class="post-image" src="../capstone_blogs/images/m2_w4_1.png" alt="Spanish Generation">
+            <img class="post-image" src="../capstone_blogs/images/m2_w4_2.png" alt="New Layout">
         </div>
     </div>
 
