@@ -33,7 +33,7 @@
           <h2 class="post-title">Introduction</h2>
           <p class="post-author">Author: Ethan Stanks</p>
           <p class="post-author">March 5, 2024</p>
-          <p class="post-page-count">Page Count: 192</p>
+          <p class="post-page-count">Word Count: 192</p>
           <p class="post-body">
                 Hello there, my name is Ethan! As of writing this, I am 20 years old and started my journey at Full Sail University in 2021.
                 My original degree path was the Game Development Computer Science program, but wanting to explore more opportunities in computer science led me to the Artificial Intelligence concentration.<br />
@@ -48,7 +48,7 @@
             <h2 class="post-title">Research and Planning</h2>
             <p class="post-author">Author: Ethan Stanks</p>
             <p class="post-author">March 17, 2024</p>
-            <p class="post-page-count">Page Count: 389</p>
+            <p class="post-page-count">Word Count: 389</p>
             <p class="post-body">
                 My team and I are currently wrapping up week two of our first month. Last week, we decided on a project idea out of the three of our pitches. Will's Pitch is an artificial intelligence anti-virus for detecting malicious threats in the firewall. Temitayo's pitch is a machine learning GANs model that generates realistic faces from prompts using NLP. My pitch is an Android app that uses machine learning to recommend recipes based on user feedback and the ingredients in their kitchen. We all agreed that Temitayo's realistic face GANs model would be a perfect project to finish off our degree and showcase our abilities.<br />
                 This week, the team and I got together to create the first draft for our project's design document and style tile. The style tile allows us to get the look and feel of our application without committing to it. The style tile includes the colors, typefaces, icons, user interface, and photography of how we plan on designing our wireframe for next week.<br />
@@ -63,7 +63,7 @@
             <h2 class="post-title">Project Management</h2>
             <p class="post-author">Author: Ethan Stanks</p>
             <p class="post-author">March 23, 2024</p>
-            <p class="post-page-count">Page Count: 406</p>
+            <p class="post-page-count">Word Count: 406</p>
             <p class="post-body">
                 My team and I have one more week of planning until development starts. This week the team got together to complete the final draft of our design document, create the first draft for our front-end wireframe, and lastly, create our Jira board for project management.<br />
                 The changes made in our design document include a new logo and name, where the back-end and front-end will be hosted, and prompt rules. We decided that the front-end will no longer use the React framework. We found out that HuggingFace allows static website hosting and can easily access hosted models. The new framework used will be HTML, as it's a lot easier to deploy on HuggingFace.<br />
@@ -78,7 +78,7 @@
             <h2 class="post-title">HuggingFace Research</h2>
             <p class="post-author">Author: Ethan Stanks</p>
             <p class="post-author">March 31, 2024</p>
-            <p class="post-page-count">Page Count: 466</p>
+            <p class="post-page-count">Word Count: 466</p>
             <p class="post-body">
                 This was the last week for project planning! Tomorrow starts my one-week spring break, then it's onto the first month of development.<br />
                 Not much was done this week, but some productive tasks were completed. First, I got refreshed and learned more about sprint planning and SCRUM. During production months, the team and I will be completing one-week sprints in agile development. The final wireframe was due, but last week we already added the final touches, so nothing needed to change. At the start of the week, we met with Chad Gibson, our instructor, to go over our Jira board and the game plan for our project. I didn't have anything else to do for the week, so I thought I'd learn more about HuggingFace because that's what I'll be working on right away. My goal was to get a basic model hosted on HuggingFace and then make a basic HTML front-end for it on HuggingFace as well.<br />
@@ -104,7 +104,7 @@
             <h2 class="post-title">First Week of Development</h2>
             <p class="post-author">Author: Ethan Stanks</p>
             <p class="post-author">April 14, 2024</p>
-            <p class="post-page-count">Page Count: 489</p>
+            <p class="post-page-count">Word Count: 489</p>
             <p class="post-body">
                 Spring break went fast, and now my team and I are already through the first week of development.
                 For our first week of spring, I was tasked with preprocessing the image dataset and creating a starter front-end display on HuggingFace that has the prompt box, image display, and random generation function.
@@ -124,7 +124,7 @@
             <h2 class="post-title">Performing EDA</h2>
             <p class="post-author">Author: Ethan Stanks</p>
             <p class="post-author">April 21, 2024</p>
-            <p class="post-page-count">Page Count: 607</p>
+            <p class="post-page-count">Word Count: 607</p>
             <p class="post-body">
                 Another week goes by, and the project is slowly coming together. This week I was tasked with ensuring the prompt box only allows words, an option to rerun the last used prompt, performing EDA on the accuracy of generated images, and performing EDA on the generated captions for each image. I was also tasked with getting the GAN model uploaded and generating images on HuggingFace, but Will and I ran into some issues with the exported model files, so that will be pushed to next week.<br />
                 Getting the prompt box to only allow words was fairly simple, as it already checks that there are words, so another if check was added in with that. I ran into some issues with Gradio, the Python interface library I use for HuggingFace, when creating the redo prompt button. I can't seem to add a button element at all to the interface. Even Gradio's documentation doesn't seem to load the example with a button, so it might be an issue on Gradio's side of things. My workaround was similar to last week for using the random seed option, a check box. If the redo last prompt checkbox is true, it will ignore whatever is in the prompt box and seed option, then run the last used prompt instead.<br />
@@ -142,7 +142,7 @@
             <h2 class="post-title">Upgrades People, Upgrades</h2>
             <p class="post-author">Author: Ethan Stanks</p>
             <p class="post-author">April 28, 2024</p>
-            <p class="post-page-count">Page Count: 977</p>
+            <p class="post-page-count">Word Count: 977</p>
             <p class="post-body">
                 Ending this week, I'm feeling really good about how this project is going. I am finally able to design the Gradio interface in a way that I feel is better, and I got the test stylegan2 model up and running on HuggingFace!<br />
                 One issue I ran into this week was getting the Cuda toolkit to work in any of my development environments. I am unable to have any of my Torch libraries recognize my Cuda toolkit install, forcing all my development to run on the CPU instead of the GPU. The only time I don't have this issue is when I run the codebase on Docker. This is a hastle because HuggingFace is its own docker and repo, so having two copies might add some confusion down the line. I'd like to look into using the HuggingFace space's Docker container locally for next week.<br />
@@ -163,7 +163,7 @@
             <h2 class="post-title">Reformatting Layout</h2>
             <p class="post-author">Author: Ethan Stanks</p>
             <p class="post-author">May 5, 2024</p>
-            <p class="post-page-count">Page Count: 516</p>
+            <p class="post-page-count">Word Count: 516</p>
             <p class="post-body">
                 The last week of the first month is now over. The project has two more months to go until it is all complete. This month I worked on getting machine learning applications running and working on HuggingFace, creating a front-end application with Gradio, creating the initial discriminator for the GAN model, performing EDA on image comparison and NLP captions, and collaborating with my team to get their work integrated into one system. Next month, I'd like to do more machine learning work. What the team wanted for the project is almost done, so there is plenty of room for more expansion and the capabilities of new systems.<br />
                 This week, my tasks involved redesigning the layout of the Gradio front-end, updating the prompt to handle multiple languages from Temitayo's functions, adjusting the image compare script for Will, adding an upload image as an input option, adding a new output for person description generation, generating images from Will's pickle file, and displaying image accuracy scores.<br />
@@ -186,7 +186,7 @@
             <h2 class="post-title">Filters and Effects</h2>
             <p class="post-author">Author: Ethan Stanks</p>
             <p class="post-author">May 12, 2024</p>
-            <p class="post-page-count">Page Count: 333</p>
+            <p class="post-page-count">Word Count: 333</p>
             <p class="post-body">
                 This was the first week of the second month of development. After this month, there is only one more to go! With the front-end running well on HuggingFace, I'm thinking of new ideas to bring to the table.<br />
                 My tasks this week included adding Temitayo's description model to the back-end, adding fitlers and effects for the generations, and generating an image from Will's pickle file again.<br />
