@@ -180,6 +180,7 @@
     <h2>Month Three</h2>
     <nav class="nav-blog">
         <a  class="nav-a" href="#9"><div class="nav-container">Filters and Effects</div></a>
+        <a  class="nav-a" href="#10"><div class="nav-container">Transparent Backgrounds</div></a>
     </nav>
     <div class="scroll-container" id="month-3">
         <div id="9" class="section post">
@@ -207,6 +208,21 @@
             <img class="post-image" src="../capstone_blogs/images/m3_w1_9.png" alt="Black and White Filter">
             <img class="post-image" src="../capstone_blogs/images/m3_w1_10.png" alt="Blue Tone Filter">
             <img class="post-image" src="../capstone_blogs/images/m3_w1_11.png" alt="Sepia Filter">
+        </div>
+        <div id="10" class="section post">
+            <h2 class="post-title">Transparent Backgrounds</h2>
+            <p class="post-author">Author: Ethan Stanks</p>
+            <p class="post-author">May 19, 2024</p>
+            <p class="post-page-count">Word Count: 365</p>
+            <p class="post-body">
+                After this week, I feel like the front-end and image processing are in a great place for the project. Next week, I'd love to dive into the stylegan-t model with Will to help him engineer it. Today, he gave me a rundown of the current issues he is facing. I'll have a lot of reading ahead to catch up with understanding the system, but it'll be a great learning experience.<br />
+                This week, I was tasked with getting the background removed from a generated face. I thought about doing this so we can apply our own background in the future or even augment the head itself onto a live webcam. There are plenty of possibilities for using this feature. This was done by a GitHub repo that my instructor Philip recommended. I installed Wiktorlazarski's head segmentation into HuggingFace's requirements. After it's installed, it can access their files so that it can segment a passed-in image. The result of their pipline has an image range of 0-1. Adjusting it to a 0-255 alpha channel allows the background to be transparent. To remove any extra space, I find the min and max coordinates of the head and crop around them. The result is below.<br />
+                I finished the transparent task earlier than expected, so I pulled the watermark task out of the backlog. All I did for this task was load our logo into a Pillow image, resize it to 1/8 of the generated image's size, then draw the logo image onto the generated image in the bottom right. The result is below. I originally had the watermark on the transparent background image, but it reverts the background back to black, so I need to look more into that.<br />
+                With half a week remaining and out of ideas for what to do, I decided to do some LinkedIn learning. I was still pretty lost with Docker. I found a learning path that the Docker team put together on LinkedIn Learning. Completing the learning path earned me a Docker Foundations Professional Certificate. I feel a lot more comfortable using Docker and understand everything there is to containerization, Docker images, and even debugging Docker containers. Below is the certification I earned.
+            </p>
+            <img class="post-image" src="../capstone_blogs/images/m3_w2_1.png" alt="Description Generation">
+            <img class="post-image" src="../capstone_blogs/images/m3_w2_2.png" alt="Filters Settings">
+            <img class="post-image" src="../capstone_blogs/images/m3_w2_3.png" alt="No Filter">
         </div>
     </div>
 
