@@ -181,6 +181,7 @@
     <nav class="nav-blog">
         <a  class="nav-a" href="#9"><div class="nav-container">Filters and Effects</div></a>
         <a  class="nav-a" href="#10"><div class="nav-container">Transparent Backgrounds</div></a>
+        <a  class="nav-a" href="#11"><div class="nav-container">Generation From Pickle</div></a>
     </nav>
     <div class="scroll-container" id="month-3">
         <div id="9" class="section post">
@@ -223,6 +224,25 @@
             <img class="post-image" src="../capstone_blogs/images/m3_w2_1.png" alt="Description Generation">
             <img class="post-image" src="../capstone_blogs/images/m3_w2_2.png" alt="Filters Settings">
             <img class="post-image" src="../capstone_blogs/images/m3_w2_3.png" alt="No Filter">
+        </div>
+        <div id="11" class="section post">
+            <h2 class="post-title">Generation From Pickle</h2>
+            <p class="post-author">Author: Ethan Stanks</p>
+            <p class="post-author">May 26, 2024</p>
+            <p class="post-page-count">Word Count: 604</p>
+            <p class="post-body">
+                The weeks are going faster and faster; sooner or later, this project will be complete! After last week, I ran out of ideas for what I could contribute. Will is working on the StyleGan-T model, so the group decided to help him.<br />
+                I was tasked with updating HuggingFace to include Temitayo's new description script. Since I was going to start helping Will, I tasked myself with researching the StyleGan-T architecture. At the start of the week, Will was running into errors while starting the training of the model. He and I tasked ourselves with troubleshooting to get training started.<br />
+                Updating the description script was simple. All I had to do was replace the script with the new one and replace a function call in the Gradio app script. Below is how the output now looks.<br />
+                Researching StyleGan-T was okay. If I am to give a score on my understanding of how it all works, I'd say 40%, but reading papers isn't a skill I have, sadly. I tried to understand it all by reading the paper a couple times, but there is so much going on in it that I can't wrap my head around it. I'm more of a hands-on, do-it learner. I did find a nice video on YouTube that spent an hour going over and explaining the figures only, which helped me a lot.<br />
+                By the time I was ready to start working with Will, he had figured out the issue and was able to start training. That means I really only did two days worth of work and research. After a whole day of training, Will provided me with the pickle file for the model. He didn't have anything setup to actually generate images from the file, so I figured I'd give myself that task. After a couple days, I figured it out!<br />
+                I load the model from the pickle file using the Python dill package. Take the prompt and encode it through the clip model to get the text features. Get 'z' by the number of images to generate, the z_dim, and the torch device. Then generate the image using the loaded model using the encoded prompt and z. After the image is generated, I convert it to a Pillow image for better display.
+                Great, so I have the model loading from the pickle file locally, so why not try and get it working on HuggingFace? Well, that's where I ran into some issues. Locally, I am running on our own Docker images with all the files Will used for training. On HuggingFace, it uses its own Docker image, and I don't know what files the model will need when it is loaded. I created a basic Gradio interface that works with the model locally. Putting all the generation code in a new HuggingFace space with the new Gradio app runs into errors. I went through over 20 of them. Most were missing modules and issues with file paths, but now I'm at one I haven't been able to figure out. Below is the generation using the Gradio app locally, as well as the error I get on HuggingFace.<br />
+                Next week I am moving from Florida to Tennessee, so I don't know how my internet situation will be. I talked to Will about what he thinks I can work on that is small but helpful for him. He said it'd be great to have a Gradio interface for his training. Right now, he has to type out a long command for starting the training and wants an interface to change the many different options we can do for it.
+            </p>
+            <img class="post-image" src="../capstone_blogs/images/m3_w3_1.png" alt="Description Generation">
+            <img class="post-image" src="../capstone_blogs/images/m3_w3_2.png" alt="Generation from Pickle file">
+            <img class="post-image" src="../capstone_blogs/images/m3_w3_3.png" alt="Error on HuggingFace">
         </div>
     </div>
 
