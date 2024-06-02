@@ -182,6 +182,7 @@
         <a  class="nav-a" href="#9"><div class="nav-container">Filters and Effects</div></a>
         <a  class="nav-a" href="#10"><div class="nav-container">Transparent Backgrounds</div></a>
         <a  class="nav-a" href="#11"><div class="nav-container">Generation From Pickle</div></a>
+        <a  class="nav-a" href="#12"><div class="nav-container">Training Command Interface</div></a>
     </nav>
     <div class="scroll-container" id="month-3">
         <div id="9" class="section post">
@@ -243,6 +244,23 @@
             <img class="post-image" src="../capstone_blogs/images/m3_w3_1.png" alt="Description Generation">
             <img class="post-image" src="../capstone_blogs/images/m3_w3_2.png" alt="Generation from Pickle file">
             <img class="post-image" src="../capstone_blogs/images/m3_w3_3.PNG" alt="Error on HuggingFace">
+        </div>
+        <div id="12" class="section post">
+            <h2 class="post-title">Training Command Interface</h2>
+            <p class="post-author">Author: Ethan Stanks</p>
+            <p class="post-author">June 2, 2024</p>
+            <p class="post-page-count">Word Count: 448</p>
+            <p class="post-body">
+                This week was very hard to work on the project due to moving. Monday and Tuesday, I was finishing getting everything packed up. On Wednesday, I spent the whole day loading up the Uhaul truck. On Thursday, I drove for over 11 hours from Florida to Tennessee. Friday and Saturday, I spent unloading and getting everything organized. I wasn't able to actually get work done until late Saturday evening and today.<br />
+                I was tasked with creating an interface for the training process to help Will. I've been feeling very great about my abilities to create Gradio interfaces. I knew I'd need to create some kind of toggle on/off for each training option. Also, each training option has an input, which could be a string, integer, float, bool, or even multiple booleans. There are also some options that are required, so they can't be turned off. With all that, I went through and started making the interface.<br />
+                To keep the interface looking organized due to having 25 different options, I used Gradio's Accordion block to separate the toggle on/off from the inputs. I used TextBlocks for strings, Number blocks for integers and floats, Checkbox blocks for bools, and a Radio block for multiple booleans.<br />
+                Now how does the command get created? I pass all 50 interface blocks to a build command function: 25 for toggle on/off and 25 for the inputs. I hardcoded the command to start with "python /app/Python/data/SG2/train.py" as it needs to use Python to call the command and needs to run the train.py script. Then it goes through each of the 25 toggle checkboxes to see which ones are checked. If one is toggled on, it will add the command and the input to the end of the command string. After checking each toggle, it will return the command to the interface.<br />
+                I originally planned for it to actually start training using Subprocess, but it was having issues trying to start the train script. It does provide the command in an output textbox that we can paste into the terminal ourselves. Below is the result after running it with the required toggles and how the input and toggle sections look.<br />
+                Today is the last day of month three. Next month, hopefully, the model will be trained long enough for good results. I plan The group discussed taking the output result of the model and running more image augmentations on it. I also had an idea where we could deep-fake our live webcam onto the image to make it seem like the generated face is the one talking. We have one or two more months to go, so hopefully our end product looks clean and functions well!
+            </p>
+            <img class="post-image" src="../capstone_blogs/images/m3_w4_1.png" alt="Training Interface">
+            <img class="post-image" src="../capstone_blogs/images/m3_w4_2.png" alt="Input Section">
+            <img class="post-image" src="../capstone_blogs/images/m3_w4_3.png" alt="Toggle Section">
         </div>
     </div>
 
