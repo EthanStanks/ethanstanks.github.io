@@ -266,10 +266,23 @@
 
     <h2>Month Four</h2>
     <nav class="nav-blog">
-        <a  class="nav-a" href="#"><div class="nav-container">Coming soon...</div></a>
+        <a  class="nav-a" href="#13"><div class="nav-container">Debugging and Training</div></a>
     </nav>
     <div class="scroll-container" id="month-4">
-        
+        <div id="13" class="section post">
+            <h2 class="post-title">Debugging and Training</h2>
+            <p class="post-author">Author: Ethan Stanks</p>
+            <p class="post-author">June 9, 2024</p>
+            <p class="post-page-count">Word Count: 712</p>
+            <p class="post-body">
+                With two months left to go, the team is narrowing down what is left to be done. Will has been working on training the stylegan-t model; Temitayo has been working on setting up image augmentation; and I have been dedicating my time to helping Will. Will has been having all sorts of issues with his laptop, which he uses to train the model. Last week, he ran into a big issue that wouldn't let him train past 20 epochs. The model is set up to save a pickle file and a generation image from the current state of the generator every 5 epochs. For some reason, every time it got to the 20th epoch, it would crash for him.<br />
+                This week, I was tasked with helping Will figure out this issue. During my group's meeting, I mentioned that it may be a memory issue. If it's crashing at 20 epochs every time, then maybe it is keeping the other saved models in memory and then running out of room at the 20'th epoch model. With this in mind, I went digging in the training loop.<br />
+                The training loop takes in a load of parameters, but the one I wanted to focus on was the network snapshot ticks. This parameter is used to tell the loop how often to save network snapshots. We have this set to five, so it will save: 0, 5, 10, 15, and then crash on 20. When it sees that the current tick needs to save a snapshot, it creates a dictionary that contains the generator, descriminator, model, and training arguments. It will make a deep copy of the model, which is very memory-intensive. Strangely enough, Will conserves memory in the loop by deleting the deep copy after storing it, so it can't be that. Later in the process, the script evaluates the training metrics. After outputing the metrics, it will conserve memory by deleting the dictionary that stores the generator, discriminator, model, and training arguments. With it deleting these two variables that utilize a lot of memory, I can't seem to think of what would cause this issue.<br />
+                Will always seems to run into issues with WSL. Our instructor, Phil, discussed during the meeting that the issue could be a result of the Docker container or WSL not having enough allocated disk space or memory. Will already tried to allocate more space for both on his Docker container, but that was no luck. While Will worked on figuring out how to allocate more space for WSL, I wanted to run the training on my machine to see if I ran into the same issue with it crashing at 20 epochs. Will's machine runs Docker on WSL2 using Ubuntu on Windows. My machine runs Docker using a Linux distribution, so I won't run into any issues with WSL. After fixing some pathing issues, I was able to start training the model using labels and images. I left to run some errands and came back to the training on epoch 50! Since then, Will and I have discussed switching his laptop to a Linux distribution instead of running WSL on Windows. I have been running the training on my laptop for the past three or four days. Below is a GIF of all the image snapshots that were saved. It's very interesting to see how the images change over time, including the generator exploring different saturation levels, like going from black all the way to fully white. As of right now, the model has been trained on 1,500 kimgs. I'm going to continue to train the model until Will gets his laptop all ready for training again. Also, I was tasked with figuring out how to generate images from the pickle file on HuggingFace and fixing the error there, but I haven't been able to use my working laptop while it trains.<br />
+                Next week, I want to generate valuable descriptions for the Flickr face dataset. The dataset the model is currently training on contains a variety of images that are not exclusive to faces. We can't use the Flickr dataset due to not having good enough labels for the images. If I can get some decent descriptions generated, we can narrow the training scope to better match FaceCraft's goals.
+            </p>
+            <img class="post-image" src="../capstone_blogs/images/m4_w1_1.gif" alt="Saved image snapshot gif">
+        </div>
     </div>
     
 
