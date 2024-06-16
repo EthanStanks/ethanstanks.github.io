@@ -267,6 +267,7 @@
     <h2>Month Four</h2>
     <nav class="nav-blog">
         <a  class="nav-a" href="#13"><div class="nav-container">Debugging and Training</div></a>
+        <a  class="nav-a" href="#14"><div class="nav-container">Label Generation</div></a>
     </nav>
     <div class="scroll-container" id="month-4">
         <div id="13" class="section post">
@@ -282,6 +283,22 @@
                 Next week, I want to generate valuable descriptions for the Flickr face dataset. The dataset the model is currently training on contains a variety of images that are not exclusive to faces. We can't use the Flickr dataset due to not having good enough labels for the images. If I can get some decent descriptions generated, we can narrow the training scope to better match FaceCraft's goals.
             </p>
             <img class="post-image" src="../capstone_blogs/images/m4_w1_1.gif" alt="Saved image snapshot gif">
+        </div>
+        <div id="14" class="section post">
+            <h2 class="post-title">Label Generation</h2>
+            <p class="post-author">Author: Ethan Stanks</p>
+            <p class="post-author">June 16, 2024</p>
+            <p class="post-page-count">Word Count: 500</p>
+            <p class="post-body">
+                This week, my goals were to generate label data for the Flickr image dataset. In order to train the stylegan-t model for realistic faces with prompts, we need labels that hold enough information so the pretrained clip model can get plenty of insights into the different attributes of each image. The ultimate goal is for the model to understand almost every attribute, like hair color, eye color, age, and what a person is wearing. I wasn't able to get to all that this week, but I feel like what I have is a start.<br />
+                At the beginning of the week, I ran training on my end. Will was able to have his machine back up and running on a Linux distribution, so I was able to pass it off to him to continue off from my latest snapshot. Below is the last snapshot image I had, around 2901kimgs.<br />
+                Back to labels: I wanted to get the basics down for generating attributes. A person's race, gender, age, and emotions can provide a lot of information about the labels. I tried to find a pretrain model that had all those attributes and more, but wasn't able to. I did find one on GitHub, DeepFace, that is able to generate decent results. It took some time to get it working due to outdated documentation, but I was able to get it up and running with a test image. Sometimes it wasn't able to recognize the face on an image. To not have missing label information, I put “n/a” in instead of leaving the image out. It did this for 6,094 out of the 70,000 total images. For images it did work for, it would seem to be very accurate. Below is an example, and here is the label that was generated: “asian 29 years old Woman, appears happy.” I don't know how to structure the sentence for the clip model, so I formatted it as “{race} {age} years old {gender}, appears {emotion}.”<br />
+                I asked Will if he thought that was good enough or if I should continue adding more attributes. He agreed that adding more attributes would be a lot better and mentioned glasses. I found a pretrained model on GitHub that does just that. Glasses-detector can create a bounding box around classes or can classify if images have glasses of any type by returning true or false. Once I got it setup and was working on test images, I added it to the label generation structure. When it checks for the DeepFace attributes, it will also check if the person is wearing glasses. Below is an example image with this label: “black 30 years old Man with glasses, appears sad.” If the glasses classifier came back true, I slapped “with glasses” in the middle of the label. As you can see in the image, the person has glasses, but they are a woman and don't appear sad at all. Sometimes it also says they have glasses when they don't. This might poison the model, so further review may be required. <br />
+                Either next week or some other time, I'd like to see if I can add more to this. I'd like to get eye color, hair color, different hair styles, facial hair, and even more clothing.
+            </p>
+            <img class="post-image" src="../capstone_blogs/images/m4_w2_1.png" alt="Snapshot">
+            <img class="post-image" src="../capstone_blogs/images/m4_w2_2.png" alt="Example 1">
+            <img class="post-image" src="../capstone_blogs/images/m4_w2_3.png" alt="Example 2">
         </div>
     </div>
     
