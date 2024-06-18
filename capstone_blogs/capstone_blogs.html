@@ -268,6 +268,7 @@
     <nav class="nav-blog">
         <a  class="nav-a" href="#13"><div class="nav-container">Debugging and Training</div></a>
         <a  class="nav-a" href="#14"><div class="nav-container">Label Generation</div></a>
+        <a  class="nav-a" href="#15"><div class="nav-container">Image Generation On HuggingFace</div></a>
     </nav>
     <div class="scroll-container" id="month-4">
         <div id="13" class="section post">
@@ -299,6 +300,22 @@
             <img class="post-image" src="../capstone_blogs/images/m4_w2_1.png" alt="Snapshot">
             <img class="post-image" src="../capstone_blogs/images/m4_w2_2.png" alt="Example 1">
             <img class="post-image" src="../capstone_blogs/images/m4_w2_3.png" alt="Example 2">
+        </div>
+        <div id="15" class="section post">
+            <h2 class="post-title">Image Generation On HuggingFace</h2>
+            <p class="post-author">Author: Ethan Stanks</p>
+            <p class="post-author">June 19, 2024</p>
+            <p class="post-page-count">Word Count: 567</p>
+            <p class="post-body">
+                I am writing this blog halfway through the week as I will be going on a vacation to Mexico tomorrow. This week I was tasked with debugging and fixing the errors for getting our pickle file generating on HuggingFace. I wanted to complete a task that wouldn't take me all week, but it would still be a great use of time to try and figure it out.<br />
+                The error I started with was an issue with not having custom hooks inside the HuggingFace codebase. I found where the code calls these custom hooks, but I have no idea how to actually add them in. I decided to start from scratch in a folder where it wouldn't be able to access any dependencies inside the original local repository. Doing this, I can see exactly what the pickle file would need in order to generate. I was then able to work through all the modules and hook dependencies by dropping the entire training module folder into the local space, which seemed to do the trick. Next was getting the pickle file to generate an image. I first tried to do this with a hardcoded prompt, but I ran into more errors. Something inside the mapping network causes it to not be able to process text encoding with the x and w for matrix math. I know Temitayo has generations working on his end because he demonstrated it with his image augmentation during the meeting this week. Taking a look at his code, I saw he is generating a random image from the pickle file and not one from a prompt. Taking what I learned from that, I implemented a new script that will only try to generate an image with a random z. That seemed to have worked, so I went onto getting it implemented on a new HuggingFace space.<br />
+                When creating a new space, HuggingFace gives you a couple of options. Streamlit, Gradio, Docker, and Static. Normally, when I make a space, I go with Gradio because HuggingFace will run a Docker image that is ready to launch the Gradio application. This time, I went with the Docker option in order to run my own Docker image for the space. This can assure the space runs all the dependencies needed for the generation and gives me more control over it. It took me a while to finally get the space to work with Gradio. This is because I need to give write permissions for torch caching, user permissions, and ensure the Docker image will start the Gradio application. I got it working, and the random generation works! Below is a screenshot of it fully generating on HuggingFace using the cheapest GPU option at 40 cents per hour.<br />
+                I wanted to see if Temitayo's code base has the same issue I have with generating with a text prompt. I have been running from Will's branch, which might be a couple versions ahead of Temitayo's version. After getting his folder and pickle file, I still wasn't able to get it to run. I got the same error as before. Below, you can see the shapes of x and w. I also included the error and where in the code this error is getting thrown. I tried to manipulate the shape of x and w for a long time, but no matter what I did, I wasn't able to “hack” it.
+            </p>
+            <img class="post-image" src="../capstone_blogs/images/m4_w3_1.png" alt="HuggingFace">
+            <img class="post-image" src="../capstone_blogs/images/m4_w3_2.png" alt="Shapes">
+            <img class="post-image" src="../capstone_blogs/images/m4_w3_3.png" alt="Error">
+            <img class="post-image" src="../capstone_blogs/images/m4_w3_4.png" alt="Code">
         </div>
     </div>
     
