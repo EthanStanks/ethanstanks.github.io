@@ -269,6 +269,7 @@
         <a  class="nav-a" href="#13"><div class="nav-container">Debugging and Training</div></a>
         <a  class="nav-a" href="#14"><div class="nav-container">Label Generation</div></a>
         <a  class="nav-a" href="#15"><div class="nav-container">Image Generation On HuggingFace</div></a>
+        <a  class="nav-a" href="#16"><div class="nav-container">Backup Training</div></a>
     </nav>
     <div class="scroll-container" id="month-4">
         <div id="13" class="section post">
@@ -316,6 +317,23 @@
             <img class="post-image" src="../capstone_blogs/images/m4_w3_2.png" alt="Shapes">
             <img class="post-image" src="../capstone_blogs/images/m4_w3_3.png" alt="Error">
             <img class="post-image" src="../capstone_blogs/images/m4_w3_4.png" alt="Code">
+        </div>
+        <div id="16" class="section post">
+            <h2 class="post-title">Backup Training</h2>
+            <p class="post-author">Author: Ethan Stanks</p>
+            <p class="post-author">June 30, 2024</p>
+            <p class="post-page-count">Word Count: 575</p>
+            <p class="post-body">
+                These weeks keep flying by faster and faster. After today, we will only have one month left for the project. With the current issues and our StyleGan-T model not training as intended, I don't think it will be possible to train the model to a good enough standard for the final turn-in. Will has spent the majority of his time working on getting the model as it is, so I would feel bad for all that work going to waste. I told him that if we can't get fully trained by the time we need to present, we can still train after we finish our degree. Then I'll go in and set it all up on HuggingFace and create a new readme for GitHub to have what we really wanted in the end.<br />
+                This week, I tasked myself with getting the old StyleGan2 model up and running again. Will still left the file in our repository, so it didn't take long for me to get things up and going again. The only long part was getting the Flickr dataset downloaded again. The difference between the two models is that this one doesn't do text encoding. All generations would have to be random. If I can get this model trained for the remainder of the time we have, I'm sure we can get decent results for our final presentation.<br />
+                I started to train the model on the dataset with a resolution of 128x128 for about 54 epochs. With the images so small and a batch size of 20, the model started picking things up pretty quick. I talked to Will and asked if I should bump up the resolution before I get too far into training the 128x128, and he agreed. I tried to train the model on 1024x1024 and 512x512, but I kept running out of allocated space for my laptop's GPU. Even lowering the batch size down to something like 5 didn't help. I eventually landed on being able to train the model with a resolution of 256x256 and a batch size of 15. The slightly smaller batch size and slightly larger resolution size will make training go for a couple more days, but hopefully pay off. Whenever I get the model up and running on HuggingFace, I can easily up-scale the images to 512x512. I was more worried about doing that with 128x128 resolution, but since 256x256 is half of 512x512, it should blurr too badly from up-scaling. I have it currently trained up to epoch 25. Below are five example images that were saved for Epoch 25.<br />
+                With a month left, it's time to narrow down on things that must be completed. I will be training the old model until the team feels it is at a decent point to stop. I want to get this model working on HuggingFace and integrate all the old add-ons I had in the original HuggingFace space, like the image effects. I want to send Temitayo a version of my Pickle file so he can see if it will work with his image manipulation work. I want to get a set of instructions for training the model using a Docker file. I also want to get a set of instructions for running the Gradio application locally from a Docker file. If I get all this done within the next 2 to 3 weeks, I can spend more time getting my team's presentation ready. Time is ticking.
+            </p>
+            <img class="post-image" src="../capstone_blogs/images/m4_w4_1.png" alt="Example 1">
+            <img class="post-image" src="../capstone_blogs/images/m4_w4_2.png" alt="Example 2">
+            <img class="post-image" src="../capstone_blogs/images/m4_w4_3.png" alt="Example 3">
+            <img class="post-image" src="../capstone_blogs/images/m4_w4_4.png" alt="Example 4">
+            <img class="post-image" src="../capstone_blogs/images/m4_w4_5.png" alt="Example 5">
         </div>
     </div>
     
