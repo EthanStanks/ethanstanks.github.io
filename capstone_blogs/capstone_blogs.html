@@ -339,17 +339,27 @@
 
     <h2>Month Five</h2>
     <nav class="nav-blog">
-        <a  class="nav-a" href="#17"><div class="nav-container">Coming Soon...</div></a>
+        <a  class="nav-a" href="#17"><div class="nav-container">HuggingFace</div></a>
     </nav>
     <div class="scroll-container" id="month-5">
         <div id="17" class="section post">
-            <h2 class="post-title">Coming Soon...</h2>
+            <h2 class="post-title">HuggingFace</h2>
             <p class="post-author">Author: Ethan Stanks</p>
-            <p class="post-author">July _, 2024</p>
-            <p class="post-page-count">Word Count: 0</p>
+            <p class="post-author">July 6, 2024</p>
+            <p class="post-page-count">Word Count: 619</p>
             <p class="post-body">
-
+                For the first week of my team's last month, I was tasked with getting the StyleGan2 model I am training to generate on HuggingFace. I was also tasked with creating detailed instructions for running our work using Docker and creating a new GitHub for the finished product, but I will save these tasks for next week. The first week of my last month is already over! It is actually insane how fast time flies by.<br />
+                For HuggingFace, I first started by creating a new Docker space and cloning it to my local machine. I then looked into how generations are created in the training loop and mimicked it into its own function that I can call in a separate file. When the generate button is pressed on Gradio, the model will generate an image with a random z, get w by passing z into the mapping network, and then generate an image using w. The image is then passed back to Gradio. All this was setup before in my old HuggingFace space, so the only tricky part was getting this model's generator to work. Once it was generated, I took my old image manipulation effects and implemented them one by one. I got my image effects to work after some time. I ran into issues with the type of image because before, I would perform the effects on Pillow images instead of PyTorch tensors. I also ran into some issues with dependencies and ended up commenting out the ability to do an oil painting effect. I added back the watermark script I made. Then I added the head segmentation script so that we could remove the background again. I ran into issues with my Docker file with the head segmentation's model download. After some time and messing with user permissions in the Docker file, I got it to finally work. With everything working locally, I worked on getting it to work on the HuggingFace space. Things are a little different from local to online for a HuggingFace repository, but I got things working after some time. Below is a picture of the current state of the space with a generation.<br />
+                I wanted to see if I could generate an image from an image without using CLIP. I believe someone on my team was tasked with performing image-to-image translation using CLIP, but I am not a fan of all the dependencies needed to run CLIP on HuggingFace. It took quite a lot of errors, but once I worked through each one, I was finally able to start producing results. It works by finding a latent representation that corresponds to the target image in our model's space. Under the hood, it looks similar to how a normal generation is made, but with a lot of extra steps. I implemented it on HuggingFace by adding an image upload component. When the image is uploaded, Gradio turns it into a numpy array, the numpy array is turned into a PyTorch tensor, the tensor is projected into the model's latent space, and then an image is generated like it normally is but with a new Z from the projection. Below is an example of it working on HuggingFace. The bottom image is the uploaded image, and the top is the generated image from the translation.<br />
+                Also, throughout the week, I continued training the model. As of writing, it has finished epoch 92. I plan to keep running this until the end of week 3, so there is still plenty of time for our model to really hammer in training. The example generations look great. I feel like in another week it will start producing medium-quality generations. Below are the examples generated from Epoch 92.
             </p>
+            <img class="post-image" src="../capstone_blogs/images/m5_w1_1.png" alt="HuggingFace Space">
+            <img class="post-image" src="../capstone_blogs/images/m5_w1_2.png" alt="Image-to-Image">
+            <img class="post-image" src="../capstone_blogs/images/m5_w1_3.png" alt="Example 1">
+            <img class="post-image" src="../capstone_blogs/images/m5_w1_4.png" alt="Example 2">
+            <img class="post-image" src="../capstone_blogs/images/m5_w1_5.png" alt="Example 3">
+            <img class="post-image" src="../capstone_blogs/images/m5_w1_6.png" alt="Example 4">
+            <img class="post-image" src="../capstone_blogs/images/m5_w1_7.png" alt="Example 5">
         </div>
     </div>
     
