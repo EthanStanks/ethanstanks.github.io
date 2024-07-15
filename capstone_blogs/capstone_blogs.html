@@ -340,6 +340,7 @@
     <h2>Month Five</h2>
     <nav class="nav-blog">
         <a  class="nav-a" href="#17"><div class="nav-container">HuggingFace</div></a>
+        <a  class="nav-a" href="#18"><div class="nav-container">GitHub and Docker</div></a>
     </nav>
     <div class="scroll-container" id="month-5">
         <div id="17" class="section post">
@@ -360,6 +361,21 @@
             <img class="post-image" src="../capstone_blogs/images/m5_w1_5.png" alt="Example 3">
             <img class="post-image" src="../capstone_blogs/images/m5_w1_6.png" alt="Example 4">
             <img class="post-image" src="../capstone_blogs/images/m5_w1_7.png" alt="Example 5">
+        </div>
+        <div id="18" class="section post">
+            <h2 class="post-title">GitHub and Docker</h2>
+            <p class="post-author">Author: Ethan Stanks</p>
+            <p class="post-author">July 14, 2024</p>
+            <p class="post-page-count">Word Count: 680</p>
+            <p class="post-body">
+                I can't believe how fast time is flying. Week two of the last month is a wrap. I was tasked with creating a new GitHub repository to serve as the final product. I was tasked with creating instructions for training and generating images using Docker. Also, I was tasked with fixing the logo not showing up on the HuggingFace space.<br />
+                This week, training has come to a stop. For some odd reason, the images end up as fully black pixels. This happens after the second epoch from a loaded checkpoint. For instance, if I started to train from checkpoint 40, all images trained on epoch 42 and beyond would be black. Epoch 41, for some reason, is normal. The current checkpoint is good, but it's not great to use in the final product. Will is trying to get it running on his PC, but he is also facing the black image issue. Either something got corrupt in the checkpoints or something that we haven't found is causing this.<br />
+                I spent a whole day working on getting the logo to load on HuggingFace. I kept trying every possible file path, changing the Docker file the space runs on, and even messing with the user permissions of read access for the files in the space. I just could not get it to work. The thing is, I have the logo loading on a different test space. On there, the file path is "file/logo.png," so I thought that would work on this one. The only difference between the two spaces is that this one runs on a custom Docker file I created. That's what made me think it was a Docker issue. Well, it was not. The whole time, I was missing one line inside the Gradio app script. “gr.set_static_paths(['.'])” will add all files as a static path. This is how the custom CSS will be able to find the logo and allow read access. The entire time, I was missing this line, and I even had it on the old test space! Below is a screenshot of the space.<br />
+                Creating the new GitHub was pretty straight-forward. It was creating the Docker files that gave me some headaches. After about four to five days, I got two separate Docker files that a user can run depending on whether they want to train or generate. The instructions for the training Docker file will have the user open Visual Studio Code and then run the training script. The instructions for generating are a lot simpler. All they have to do is open localhost in their browser with the port of the Gradio application. I ran into a major issue with the CV2 pip install that the head segmentation needed. The containers build off NVIDIA's PyTorch container. Their container installs a cv2 version that makes a component of the head segmentation outdated. You would think uninstalling CV2 and then reinstalling it with the correct version would work, but it doesn't. The uninstall wouldn't remove all of the packages CV2 installs. Before reinstalling CV2, I had to set up the Docker file to remove the entire CV2 folder. This error took me two days, and it was the best feeling getting it to work today. Below is a screenshot of the instructions I made for the repository.<br />
+                I have no idea what I will be working on next week. My guess is that I will be attempting to get Temitayo's work integrated into HuggingFace and the final GitHub repo. I'm nervous about adding CLIP to the codebase because it's the third week of the last month. Last time, there were so many dependencies and extra stuff needed to get it working on HuggingFace. I can't even imagine getting it working on every single custom Docker file I have made. I'm fine with just having it generated from a random z space, and I do have image-to-image generation working. I would rather focus on fixing the training issue and working on our presentation. But if the team thinks adding it is best, then I will try my best.
+            </p>
+            <img class="post-image" src="../capstone_blogs/images/m5_w2_1.png" alt="HuggingFace Space">
+            <img class="post-image" src="../capstone_blogs/images/m5_w2_2.png" alt="Docker instructions">
         </div>
     </div>
     
