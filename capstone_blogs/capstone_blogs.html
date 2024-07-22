@@ -341,6 +341,7 @@
     <nav class="nav-blog">
         <a  class="nav-a" href="#17"><div class="nav-container">HuggingFace</div></a>
         <a  class="nav-a" href="#18"><div class="nav-container">GitHub and Docker</div></a>
+        <a  class="nav-a" href="#19"><div class="nav-container">Final Development Week</div></a>
     </nav>
     <div class="scroll-container" id="month-5">
         <div id="17" class="section post">
@@ -376,6 +377,22 @@
             </p>
             <img class="post-image" src="../capstone_blogs/images/m5_w2_1.png" alt="HuggingFace Space">
             <img class="post-image" src="../capstone_blogs/images/m5_w2_2.png" alt="Docker instructions">
+        </div>
+        <div id="19" class="section post">
+            <h2 class="post-title">Final Development Week</h2>
+            <p class="post-author">Author: Ethan Stanks</p>
+            <p class="post-author">July 21, 2024</p>
+            <p class="post-page-count">Word Count: 483</p>
+            <p class="post-body">
+                The project is coming to an end. This week was the last week for any development. I can't believe how fast these past five months have gone. I was tasked with integrating Temitayo's CLIP prompting code into the GitHub and HuggingFace repositories. I was also tasked with adding an option to pick which trained checkpoint to generate from. I finished these tasks pretty fast, so I had plenty of time to integrate Temitayo's image manipulation slider into the codebase as well.<br />
+                Temitayo provided me with the script for generating from a prompt with CLIP. I was really worried about integrating his code because last time it was a whole mess of dependencies and modules. This time, however, went really well. It was all under one script and only needed one pip install, so I didn't have to change much. I didn't want to change the generation architecture I currently had, so I dissected his script and took out whatever functions I needed in order to get it working. Below is an example of generating from the prompt, “An old Asian man.”<br />
+                The checkpoint selection was pretty straightforward. My original idea was to have separate generate buttons for each checkpoint. Depending on the button, it would use that correlating checkpoint to generate the image. The problem with that is all the buttons. My workaround is to use my settings section. I added a drop-down menu where the user can select what checkpoint they want to run from, with the default being our latest model. The app script will load all checkpoints when the application is started. When the user does any of the generation options, it will check to see what checkpoint they have selected and use the correlating model. Below is a screenshot of generating from Epoch 1.<br />
+                I ended up having a lot more time on my hands than I originally expected. Temitayo sent over his script for the image manipulation slider. There is one slight issue with integrating it into a HuggingFace space. The script saves the last generated image's latent space and W. Then it takes those saved variables and manipulates the space using the slider. The issue is that the HuggingFace space is running as one instance for every user using it. Let's say user A generates an image. Right after user A's generation, user B does a generation. If user A moved the slider, it would use user B's latent space and W. Another issue is the multiple image generation. If the user generates four images, it will only manipulate the last generated image. I asked the team if they agreed to implement the slider even with those issues, and they said go for it. I mean, it works, but I would only manipulate the image's space if you were the only user running the HuggingFace space. Below is a generated image before and after moving the slider.
+            </p>
+            <img class="post-image" src="../capstone_blogs/images/M5_W3_1.PNG" alt="Prompt Example">
+            <img class="post-image" src="../capstone_blogs/images/M5_W3_2.PNG" alt="Multiple Checkpoints Example">
+            <img class="post-image" src="../capstone_blogs/images/M5_W3_3.PNG" alt="Before Slider Example">
+            <img class="post-image" src="../capstone_blogs/images/M5_W3_4.PNG" alt="After Slider Example">
         </div>
     </div>
     
