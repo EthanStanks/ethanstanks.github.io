@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethan Stanks</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="header">Ethan Stanks</h1>
+        <p class="header">Data Scientist Utilizing Software Engineering for Powerful Data Analysis and Machine Learning!</p>
+        <nav>
+            <a class="nav-a" href="../index.html"><div class="nav-container">Home</div></a>
+            <a class="nav-a" href="../nav_pages/timeline.html"><div class="nav-container">Timeline</div></a>
+            <a class="nav-a" href="../nav_pages/projects.html"><div class="nav-container">Projects</div></a>
+            <a class="nav-a" href="../nav_pages/writings.html"><div class="nav-container">Writings</div></a>
+        </nav>
+    </header>
+    <hr class="gradient-break"/>
+
+    <h1>Drone Crash Classification</h1>
+
+    <div class="project-container">
+        <div class="description-box">
+            <h2 class="description-h2">Description</h2>
+            <p class = "description-text">This project was my graduate research development project at MTSU. I worked on labeling, training, and validate computer vision classifcation models to determine student's drone flights. The purpose was to evaluate drone flight submission to determine if student's flying skills improved through simulated training. Models would determine when students would take off, in-flight, crash, unstable, land, and lost signal.
+                I create a labeling GUI in order to save time labeling hundreds of hours of student footage. The GUI would take the student's YouTube submissions and label frames in real-time as the video plays. No more converting the video to frames and going frame-by-frame guessing what the drone is doing. I no longer have any videos or images from this project as they are on a YouTube account I do not have access to.</p>
+        </div>
+        <div class="github-box">
+            <a href="https://github.com/EthanStanks/DroneFlightClassification" target="_blank"><img src="../assets/github.png" alt="GitHub repository for the project."></a>
+        </div>
+        <div class="description-box">
+            <h2 class="description-h2">Details</h2>
+            <ul class="description-text">
+                <li>Data Pipeline Automation: Built a fully automated Python pipeline to download and preprocess videos from students' YouTube links.</li>
+                <li>Object Detection Model: Trained a YOLOv8 model on custom-labeled drone footage to detect crashes and flight maneuvers.</li>
+                <li>Labeling Efficiency: Reduced labeling time and increased accuracy by over 90% through a custom timestamp-based labeling process, complemented by manual verification for quality control.</li>
+                <li> Validation GUI: Developing a Flask GUI that allows researchers to manually count and verify crashes in real-time. Each crash event is saved as a clip for reference, ensuring accurate ground truth data.</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <hr class="gradient-break"/>
+        <p>&copy; 2025 Ethan Stanks</p>
+    </footer>
+</body>
+</html>
