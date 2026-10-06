@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicting NFL Team Success | Ethan Stanks</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1 class="header">Ethan Stanks</h1>
+        <p class="header">Data Scientist Utilizing Software Engineering for Powerful Data Analysis and Machine Learning!</p>
+        <nav>
+            <a class="nav-a" href="../index.html"><div class="nav-container">Home</div></a>
+            <a class="nav-a" href="../nav_pages/timeline.html"><div class="nav-container">Timeline</div></a>
+            <a class="nav-a" href="../nav_pages/projects.html"><div class="nav-container">Projects</div></a>
+            <a class="nav-a" href="../nav_pages/writings.html"><div class="nav-container">Writings</div></a>
+        </nav>
+    </header>
+    <hr class="gradient-break"/>
+
+    <main class="research-page">
+        <h1>Predicting Season-Level NFL Team Success</h1>
+        <p class="research-byline">Seth Phillips, Brittany Fetterman, and Ethan Stanks · April 2026</p>
+
+        <section class="research-summary" aria-labelledby="research-summary-title">
+            <h2 id="research-summary-title">Research summary</h2>
+            <p>Our team combined public NFL data on plays, rosters, injuries, draft picks, schedules, and past results to study what relates to a team's total wins across a season. We analyzed 320 team-season observations from 2015 through 2024 and compared seven machine learning models using a chronological train/test split.</p>
+            <p>The best model, a tuned LSTM, reached an R² of 0.907 and a mean absolute error of 0.887 wins on the held-out seasons. A GRU and Ridge Regression performed nearly as well, underscoring the value of careful feature design.</p>
+            <p>Several inputs were measured during the season being modeled, so this is a season-level success analysis rather than a forecast made before a season starts. I contributed to data preprocessing, coding and analysis, model testing, results review, and paper development.</p>
+        </section>
+
+        <div class="research-links">
+            <a href="../downloads/NFL_Team_Success_Final_Research_Paper.pdf">Open research paper (PDF)</a>
+            <a href="../downloads/NFL_Team_Success_Final_Notebook.ipynb" download>Download supporting notebook (Jupyter)</a>
+        </div>
+
+        <h2>Research paper</h2>
+        <div class="research-pdf">
+            <embed src="../downloads/NFL_Team_Success_Final_Research_Paper.pdf" type="application/pdf" title="Predicting Season-Level NFL Team Success research paper">
+        </div>
+    </main>
+
+    <footer>
+        <hr class="gradient-break"/>
+        <p>&copy; 2026 Ethan Stanks</p>
+    </footer>
+</body>
+</html>

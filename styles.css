@@ -82,6 +82,9 @@ header{
 }
 nav {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
     list-style-type: none;
     padding: 0;
     margin-bottom: 15px;
@@ -91,7 +94,7 @@ nav {
     justify-content: center;
     border: 2px solid rgb(173, 173, 173);
     padding: 10px;
-    margin-right: 10px;
+    margin-right: 0;
 }
 .nav-container:hover {
     border: 2px solid transparent;
@@ -450,6 +453,53 @@ body .container .card .box .content a:hover {
   transition: 0.4s ease;
   border-radius: 6px;
   margin-bottom: 20px;
+}
+
+.research-page {
+  width: calc(100% - 2rem);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.research-byline {
+  text-align: center;
+  color: #c6cee2;
+}
+.research-summary {
+  background: #2a2b2f;
+  border-radius: 10px;
+  padding: 1.5rem;
+  margin: 2rem 0;
+}
+.research-summary h2 {
+  margin-top: 0;
+}
+.research-summary p {
+  line-height: 1.6;
+}
+.research-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.research-links a {
+  background: #3866f2;
+  border-radius: 5px;
+  color: white;
+  font-family: Jost;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+}
+.research-links a:hover,
+.research-links a:focus {
+  background: #0597f2;
+}
+.research-pdf embed {
+  display: block;
+  width: 100%;
+  height: min(80vh, 1000px);
+  border: 0;
 }
 
 
